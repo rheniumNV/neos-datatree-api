@@ -139,7 +139,7 @@ class IRef extends IData {
     throw new Error("Type Error Asset");
   }
   getRef() {
-    return this.ID;
+    return execToDataTree(this.ID);
   }
 }
 
@@ -163,24 +163,24 @@ class IField extends IRef {
 const GenField = (dataType, ...args) => new IField(new dataType(...args));
 
 class Slot extends IRef {
-  constructor(parent = null) {
+  constructor(name = "Empty", parent = null) {
     super();
     this.Params = {
       ID: new IDData(),
 
       Components: GenField(ListData),
 
-      Name: GenField(StringData, "Empty Slot"),
+      Name: GenField(StringData, name),
       Tag: GenField(StringData),
       Active: GenField(BoolData, true),
-      "Persistent-ID": GenField(IDData),
+      "Persistent-ID": new IDData(),
 
       Position: GenField(Vec3Data),
       Rotation: GenField(Vec3Data),
       Scale: GenField(Vec3Data),
 
       OrderOffset: GenField(NumberData),
-      ParentReference: GenField(RefData, parent),
+      ParentReference: new RefData(parent),
       Children: new ListData(),
     };
   }
@@ -203,9 +203,9 @@ class IComponent extends IRef {
       Type: typeName,
       Data: new DataMap({
         ID: new IDData(),
-        "Persistent-ID": new IDData(),
+        "persistent-ID": new IDData(),
         UpdateOrder: GenField(NumberData),
-        Enabled: GenField(BoolData),
+        Enabled: GenField(BoolData, true),
         ...extraParams,
       }),
     };
