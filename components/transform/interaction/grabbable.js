@@ -30,7 +30,7 @@ class Grabbable extends IComponent {
       _grabber: GenField(RefData),
       _lastParent: GenField(RefData),
       _lastParentIsUserSpace: GenField(BoolData, true),
-      "__legacyActiveUserRootOnly-ID": GenField(RefData, new DummyRef()),
+      "__legacyActiveUserRootOnly-ID": new RefData(new DummyRef()),
       ...params,
     });
   }
