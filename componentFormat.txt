@@ -1,0 +1,11 @@
+const { IComponent, GenField, IData } = require("../core");
+
+const origin = %s
+
+class %s extends IComponent {
+  constructor() {
+    super("%s", {%s});
+  }
+}
+
+module.exports = %s;
