@@ -1,0 +1,161 @@
+{
+  "Object": {
+    "ID": "70fa5732-3633-4cc1-91fd-b5fe8cd15f5d",
+    "Components": {
+      "ID": "a23ea4be-b837-4fcf-95c4-10b360a16153",
+      "Data": [
+        {
+          "Type": "FrooxEngine.ObjectRoot",
+          "Data": {
+            "ID": "28d737fa-6753-4b4e-866b-29bdda6062a5",
+            "persistent-ID": "28  a92faa-3b7b-4a65-96d9-e7164714e3b1",
+            "UpdateOrder": {
+              "ID": "fa7793cf-eb48-4571-b915-d4dc32c8cbe3",
+              "Data": 0
+            },
+            "Enabled": {
+              "ID": "9e4a1d5a-b60e-456c-abea-8f77c6b625d9",
+              "Data": true
+            }
+          }
+        },
+        {
+          "Type": "FrooxEngine.Grabbable",
+          "Data": {
+            "ID": "a758897c-2dab-451a-8334-43cf7988d3bc",
+            "persistent-ID": "ece3a48c-84f4-4abb-bcdc-4f97fd83e67a",
+            "UpdateOrder": {
+              "ID": "ee77050f-ef50-4d76-a1a7-524bc9066bd5",
+              "Data": 0
+            },
+            "Enabled": {
+              "ID": "3fdd7594-27b9-4887-923d-5f30394db7c7",
+              "Data": true
+            },
+            "ReparentOnRelease": {
+              "ID": "5f1e626f-92dd-40cf-997f-440c5825cc6a",
+              "Data": true
+            },
+            "PreserveUserSpace": {
+              "ID": "6b4a9691-9836-4f16-862e-0ba18ecfa38f",
+              "Data": true
+            },
+            "DestroyOnRelease": {
+              "ID": "9d381a10-a586-4367-8926-7795388ed941",
+              "Data": true
+            },
+            "GrabPriority": {
+              "ID": "43e91b61-9f0b-416c-bc62-2f0132d71077",
+              "Data": 0
+            },
+            "GrabPriorityWhenGrabbed": {
+              "ID": "a653d17e-d5d1-48e3-9b8f-ae9fc9f7cb49",
+              "Data": null
+            },
+            "CustomCanGrabCheck": {
+              "ID": "de898a1c-6887-4188-8310-a5f5b8d600a2",
+              "Data": {
+                "Target": null
+              }
+            },
+            "EditModeOnly": {
+              "ID": "ea5ba817-5612-4e04-b116-cdaca62c0590",
+              "Data": false
+            },
+            "AllowSteal": {
+              "ID": "7fae5597-7348-4cdb-9bed-ecdd3658d42f",
+              "Data": false
+            },
+            "DropOnDisable": {
+              "ID": "2a48a4dd-5ebd-44fd-856f-f419c04ae8a8",
+              "Data": true
+            },
+            "ActiveUserFilter": {
+              "ID": "1f90926a-e7b4-4d2a-87d3-f0d519a0816f",
+              "Data": "Disabled"
+            },
+            "OnlyUsers": {
+              "ID": "9ff1268b-9018-4b34-8c90-bf211943db24",
+              "Data": []
+            },
+            "Scalable": {
+              "ID": "54965238-cb41-46b2-8512-6a8a7ca4f764",
+              "Data": true
+            },
+            "Receivable": {
+              "ID": "cf9e0217-418b-4e6c-96ac-99b5bbc59958",
+              "Data": true
+            },
+            "AllowOnlyPhysicalGrab": {
+              "ID": "df809686-6dfb-4026-8fad-568ea21b474a",
+              "Data": false
+            },
+            "_grabber": {
+              "ID": "1cbdb003-bba7-4a36-b0ce-c42762a45a2a",
+              "Data": null
+            },
+            "_lastParent": {
+              "ID": "78d71840-e2b2-4f4b-99e5-523ae4d986f6",
+              "Data": null
+            },
+            "_lastParentIsUserSpace": {
+              "ID": "7c365c50-8780-41f7-a222-5f78f5dfc00f",
+              "Data": true
+            },
+            "__legacyActiveUserRootOnly-ID": "413be940-5a3d-49d6-a09f-3a0e15849e03"
+          }
+        }
+      ]
+    },
+    "Name": {
+      "ID": "90e72686-4dad-49aa-ab6b-f8cf76b6e198",
+      "Data": "Sample Object"
+    },
+    "Tag": {
+      "ID": "f373facd-0d33-4c78-9e48-5714b8a3cc66",
+      "Data": ""
+    },
+    "Active": {
+      "ID": "e33ba223-f5ea-4c89-8fb4-e585d63fcf42",
+      "Data": true
+    },
+    "Persistent-ID": "28f31e52-f48f-4b97-a7d0-949e62bd3814",
+    "Position": {
+      "ID": "2be6ceaa-7eea-414f-a6dd-d5e00a452583",
+      "Data": [
+        0,
+        0,
+        0
+      ]
+    },
+    "Rotation": {
+      "ID": "93b5efad-1b26-4d0d-ae18-a9739405366a",
+      "Data": [
+        0,
+        0,
+        0
+      ]
+    },
+    "Scale": {
+      "ID": "5ac04f17-bcf3-4bd6-a74a-5c3041c56f6a",
+      "Data": [
+        0,
+        0,
+        0
+      ]
+    },
+    "OrderOffset": {
+      "ID": "fe9bcde2-eb85-4b65-b700-ae891a15b6aa",
+      "Data": 0
+    },
+    "ParentReference": null,
+    "Children": []
+  },
+  "Assets": [],
+  "TypeVersions": {
+    "FrooxEngine.InventoryItem": 1,
+    "FrooxEngine.Grabbable": 2,
+    "FrooxEngine.MeshCollider": 1,
+    "FrooxEngine.StaticShader": 1
+  }
+}
