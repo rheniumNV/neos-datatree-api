@@ -1,6 +1,7 @@
-const { IComponent, GenField, IData } = require("../core");
+const dir = require("app-root-path");
+const { IComponent, GenField, IData } = require(dir + "/core");
 
-const origin = {}
+const origin = {};
 
 class ObjectRoot extends IComponent {
   constructor() {
