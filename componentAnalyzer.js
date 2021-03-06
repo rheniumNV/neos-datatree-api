@@ -1,6 +1,14 @@
 const fs = require("fs");
 const _ = require("lodash");
 const { format, inspect } = require("util");
+const getDirName = require("path").dirname;
+
+writeFile = (path, contents, cb) => {
+  fs.mkdir(getDirName(path), { recursive: true }, (err) => {
+    if (err) throw err;
+  });
+  fs.writeFileSync(path, contents, cb);
+};
 
 defaultParamsName = ["ID", "UpdateOrder", "Enabled", "persistent-ID"];
 const analyze = (component) => ({
@@ -32,6 +40,8 @@ const componentList = _.flatten(
 
 const result = _.map(componentList, analyze);
 
+const regTypes = /`1\[.*\]$/;
+
 const rejectId = (idata) =>
   _.has(idata, "Data") && _.has(idata, "ID")
     ? format("GenField(IData, %s)", inspect(idata.Data))
@@ -41,7 +51,10 @@ _.forEach(result, (ele) => {
   const ty = _.map(ele.Data, (current, key) =>
     format('"%s" : %s,', key, rejectId(current))
   );
-  const name = _.replace(ele.Type, "FrooxEngine.", "");
+  const nameSplit = _.split(ele.Type.replace(regTypes, ""), ".");
+  const name = _.last(nameSplit);
+  console.log(name);
+  const filePath = _.join(_.slice(nameSplit, 0, -1), "/");
   const text = format(
     cFormat,
     JSON.stringify(ele.Data, null, "  "),
@@ -50,7 +63,11 @@ _.forEach(result, (ele) => {
     _.join(ty, "\n"),
     name
   );
-  fs.writeFileSync("./componentData/_" + ele.Type + ".js", text);
+  writeFile(
+    "./componentData/" + filePath + "/_" + name + ".js",
+    text,
+    () => {}
+  );
 });
 
 console.log(

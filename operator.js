@@ -20,12 +20,7 @@ const GetChild = (slot, index) =>
 const PackItem = (rootSlot, assets = []) => ({
   Object: execToDataTree(rootSlot),
   Assets: assets,
-  TypeVersions: {
-    "FrooxEngine.InventoryItem": 1,
-    "FrooxEngine.Grabbable": 2,
-    "FrooxEngine.MeshCollider": 1,
-    "FrooxEngine.StaticShader": 1,
-  },
+  TypeVersions: {},
 });
 
 module.exports = { AddComponent, SetParent, GetChildren, GetChild, PackItem };

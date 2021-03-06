@@ -202,7 +202,7 @@ class IComponent extends IRef {
     this.Params = {
       Type: typeName,
       Data: new DataMap({
-        ID: new IDData(),
+        ID: new IDData(this.ID),
         "persistent-ID": new IDData(),
         UpdateOrder: GenField(NumberData),
         Enabled: GenField(BoolData, true),
@@ -219,6 +219,9 @@ class IComponent extends IRef {
       }),
       {}
     );
+  }
+  setParam(paramName, data) {
+    util.get(this.Params.Data.Data, paramName).set(data);
   }
 }
 
